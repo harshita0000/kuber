@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dreamy pastel theme - Light mode */
+    --background: 280 40% 98%;
+    --foreground: 230 35% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 35% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 35% 20%;
+
+    --primary: 270 60% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 340 75% 75%;
+    --secondary-foreground: 230 35% 20%;
+
+    --muted: 270 30% 95%;
+    --muted-foreground: 230 15% 50%;
+
+    --accent: 160 60% 70%;
+    --accent-foreground: 230 35% 20%;
+
+    --success: 150 50% 60%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 40 85% 65%;
+    --warning-foreground: 230 35% 20%;
+
+    --destructive: 0 70% 70%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 270 30% 90%;
+    --input: 270 30% 92%;
+    --ring: 270 60% 65%;
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 60% 65%) 0%, hsl(240 70% 70%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(340 75% 75%) 0%, hsl(20 80% 75%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(160 60% 70%) 0%, hsl(180 65% 65%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(150 50% 60%) 0%, hsl(170 55% 55%) 100%);
+    --gradient-bg: radial-gradient(1200px 800px at 10% -10%, hsl(270 60% 85% / 0.6), transparent 60%),
+      radial-gradient(1000px 600px at 110% 10%, hsl(200 90% 85% / 0.5), transparent 60%),
+      radial-gradient(900px 700px at 50% 120%, hsl(160 70% 85% / 0.5), transparent 60%);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(270 60% 65% / 0.1);
+    --shadow-md: 0 4px 16px hsl(270 60% 65% / 0.15);
+    --shadow-lg: 0 8px 32px hsl(270 60% 65% / 0.2);
+    --shadow-glow: 0 0 24px hsl(270 60% 65% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 10% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 270 80% 70%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 340 70% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 5% 15%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 160 60% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 150 60% 55%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 40 85% 65%;
+    --warning-foreground: 0 0% 10%;
+
+    --destructive: 0 70% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 5% 20%;
+    --input: 240 5% 18%;
+    --ring: 270 80% 70%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(270 80% 70%) 0%, hsl(240 85% 75%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(340 70% 65%) 0%, hsl(20 80% 70%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(160 60% 60%) 0%, hsl(180 65% 65%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(150 60% 55%) 0%, hsl(170 65% 60%) 100%);
+    
+    --shadow-sm: 0 2px 8px hsl(0 0% 0% / 0.4);
+    --shadow-md: 0 4px 16px hsl(0 0% 0% / 0.5);
+    --shadow-lg: 0 8px 32px hsl(0 0% 0% / 0.6);
+    --shadow-glow: 0 0 24px hsl(270 80% 70% / 0.5);
+
+    --sidebar-background: 240 8% 10%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 270 80% 70%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 5% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 240 5% 20%;
+    --sidebar-ring: 270 80% 70%;
+  }
+
+  .theme-light {
+    --background: 0 0% 100%;
+    --foreground: 230 35% 20%;
+    --card: 0 0% 100%;
+    --primary: 230 70% 55%;
+    --secondary: 200 75% 60%;
+    --accent: 280 65% 65%;
+    --gradient-primary: linear-gradient(135deg, hsl(230 70% 55%) 0%, hsl(200 75% 60%) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image: var(--gradient-bg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-xl bg-card/70 border border-border/50 shadow-[var(--shadow-md)];
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+}
+
+@layer utilities {
+  .surface {
+    @apply glass-card rounded-xl shadow-[var(--shadow-md)];
+  }
+
+  .hero-ring {
+    position: relative;
+  }
+  .hero-ring::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 24px;
+    padding: 2px;
+    background: conic-gradient(from 90deg at 50% 50%, hsl(var(--primary) / 0.6), hsl(var(--accent) / 0.6), hsl(var(--secondary) / 0.6), hsl(var(--primary) / 0.6));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .animate-confetti {
+    animation: confetti 1s ease-out;
+  }
+
+  @keyframes confetti {
+    0% {
+      transform: translateY(0) scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) scale(0) rotate(720deg);
+      opacity: 0;
+    }
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
